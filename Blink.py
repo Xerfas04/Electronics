@@ -19,7 +19,7 @@ def setup():
 def loop():
 	while True:
 		GPIO.output(ledPin, GPIO.HIGH)  # led on
-		print ('...led on')
+		print ('...led on !')
 		# time.sleep(1)	
 		# GPIO.output(ledPin, GPIO.LOW) # led off
 		# print ('led off...')
