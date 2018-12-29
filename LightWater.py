@@ -21,7 +21,7 @@ def loop():
 	while True:
 		for pin in ledPins:		#make led off from left to right
 			GPIO.output(pin, GPIO.HIGH)	
-			time.sleep(0.1)
+			time.sleep(1)
 			GPIO.output(pin, GPIO.LOW)
 		for pin in ledPins[10:0:-1]:		#make led off from right to left
 			GPIO.output(pin, GPIO.HIGH)	
