@@ -19,11 +19,11 @@ def setup():
 def loop():
 	while True:
 		if GPIO.input(buttonPin)==GPIO.LOW:
-			GPIO.output(ledPin,GPIO.HIGH)
-			print ('led on ...')
-		else :
 			GPIO.output(ledPin,GPIO.LOW)
-			print ('led off ...')		
+			print ('led off ...')
+		else :
+			GPIO.output(ledPin,GPIO.HIGH)
+			print ('led on ...')		
 
 def destroy():
 	GPIO.output(ledPin, GPIO.LOW)     # led off
