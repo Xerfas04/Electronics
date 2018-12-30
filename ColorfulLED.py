@@ -32,8 +32,8 @@ def setColor(r_val,g_val,b_val):
 
 def loop():
 	while True :
-		r=1 
-		g=100
+		r=100
+		g=1
 		b=100
 		setColor(r,g,b)#set random as a duty cycle value 
 		print ('r=%d, g=%d, b=%d ' %(r ,g, b))
