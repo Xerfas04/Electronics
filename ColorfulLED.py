@@ -35,11 +35,11 @@ def loop():
 	g = 0
 	b = 0
 	while True :
-		if b < 100:
+		if b < 99:
 			b=b+1
-		if b%2==0 and g < 100:
+		if b%2==1 and g < 99:
 			g=g+1
-		if g%2==0 and r < 100:
+		if g%2==1 and r < 99:
 			r=r+1
 		setColor(r,g,b)#set random as a duty cycle value
 		print ('r=%d, g=%d, b=%d ' %(r ,g, b))
