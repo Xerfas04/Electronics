@@ -31,13 +31,19 @@ def setColor(r_val,g_val,b_val):
 	p_B.ChangeDutyCycle(b_val)
 
 def loop():
+	r = 0
+	g = 0
+	b = 0
 	while True :
-		for r in range(0,101):
-			for g in range(0,101):
-				for b in range(0,101):
-					setColor(r,g,b)#set random as a duty cycle value
-					print ('r=%d, g=%d, b=%d ' %(r ,g, b))
-					time.sleep(0.1)
+		if b < 100:
+			b=b+1
+		if b%2==0 and g < 100:
+			g=g+1
+		if g%2==0 and r < 100:
+			r=r+1
+		setColor(r,g,b)#set random as a duty cycle value
+		print ('r=%d, g=%d, b=%d ' %(r ,g, b))
+		time.sleep(0.05)
 		
 def destroy():
 	p_R.stop()
