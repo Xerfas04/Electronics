@@ -8,6 +8,7 @@
 import RPi.GPIO as GPIO
 import time
 import random
+import math
 
 pins = {'pin_R':11, 'pin_G':12, 'pin_B':13}  # pins is a dict
 PI = 3.14159265359
@@ -39,7 +40,7 @@ def loop():
 		b=(b+0.06)%(2*PI)
 		g=(g+0.06)%(2*PI)
 		r=(r+0.06)%(2*PI)
-		setColor(((Math.sin(r)+1)/2)*99,((Math.sin(g)+1)/2)*99,((Math.sin(b)+1)/2)*99)
+		setColor(((math.sin(r)+1)/2)*99,((math.sin(g)+1)/2)*99,((math.sin(b)+1)/2)*99)
 		print ('r=%d, g=%d, b=%d ' %(r ,g, b))
 		time.sleep(0.05)
 		
