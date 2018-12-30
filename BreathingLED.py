@@ -6,7 +6,7 @@ def setup():
 	GPIO. setmode(GPIO.BOARD)      # Numbers GPIOs by phisical location
 	GPIO. setup(LedPin, GPIO.OUT)   # Set LedPin's mode is output
 	GPIO. output(LedPin, GPIO.LOW) #Set LedPin to low
-	p = GPIO.PWN(LedPin, 1000)     # Set Frequency to 1KHz
+	p = GPIO.PWM(LedPin, 1000)     # Set Frequency to 1KHz
 	p.start(0)                     # Duty Cycle = 0
 def loop():
 	while True:
