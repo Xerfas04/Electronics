@@ -32,9 +32,9 @@ def setColor(r_val,g_val,b_val):
 
 def loop():
 	while True :
-		r=100
-		g=0
-		b=0
+		r=99
+		g=10
+		b=10
 		setColor(r,g,b)#set random as a duty cycle value 
 		print ('r=%d, g=%d, b=%d ' %(r ,g, b))
 		time.sleep(0.3)
