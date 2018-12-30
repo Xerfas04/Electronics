@@ -41,7 +41,7 @@ def loop():
 		g=(g+0.06)%(2*PI)
 		r=(r+0.06)%(2*PI)
 		setColor(((math.sin(r)+1)/2)*99,((math.sin(g)+1)/2)*99,((math.sin(b)+1)/2)*99)
-		print ('r=%d, g=%d, b=%d ' %(r ,g, b))
+		print ('r=%d, g=%d, b=%d ' %(((math.sin(r)+1)/2)*99,((math.sin(g)+1)/2)*99,((math.sin(b)+1)/2)*99))
 		time.sleep(0.05)
 		
 def destroy():
