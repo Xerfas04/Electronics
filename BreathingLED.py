@@ -10,11 +10,11 @@ def setup():
 	p.start(0)                     # Duty Cycle = 0
 def loop():
 	while True:
-		for dc in range(0, 101, 1)	# Increase duty cycle 0~100
+		for dc in range(0, 101, 1):	# Increase duty cycle 0 100
 			p.ChangeDutyCycle(dc)       # Change duty cycle
 			time sleep(0.01)
 		time sleep (1)
-		for dc in range (100, -1, -1) #Decrease duty cycle 100~0
+		for dc in range (100, -1, -1): #Decrease duty cycle 100 0
 			p.ChangeDutyCycle(dc)
 			time sleep (0.01)
 		time sleep (1)
