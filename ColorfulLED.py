@@ -32,20 +32,10 @@ def setColor(r_val,g_val,b_val):
 
 def loop():
 	while True :
-			for dc in range(0, 101, 1):	# Increase duty cycle 0 100
-				r=p_R.ChangeDutyCycle(r_val)      
-				g=p_G.ChangeDutyCycle(g_val)
-				b=p_B.ChangeDutyCycle(b_val)
-			time.sleep(0.01)
-		setColor(r,g,b)
-		print ('r=%d, g=%d, b=%d ' %(r ,g, b))
-		time.sleep(0.3)
-		for dc in range (100, -1, -1): #Decrease duty cycle 100 0
-				r=p_R.ChangeDutyCycle(r_val)      
-				g=p_G.ChangeDutyCycle(g_val)
-				b=p_B.ChangeDutyCycle(b_val)
-			time.sleep (0.01)
-		setColor(r,g,b)
+		r=random.randint(0,100)#get a random in (0,100)
+		g=random.randint(0,100)
+		b=random.randint(0,100)
+		setColor(r,g,b)#set random as a duty cycle value 
 		print ('r=%d, g=%d, b=%d ' %(r ,g, b))
 		time.sleep(0.3)
 		
