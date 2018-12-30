@@ -10,6 +10,7 @@ import time
 import random
 
 pins = {'pin_R':11, 'pin_G':12, 'pin_B':13}  # pins is a dict
+PI = 3.14159265359
 
 def setup():
 	global p_R,p_G,p_B
@@ -32,16 +33,13 @@ def setColor(r_val,g_val,b_val):
 
 def loop():
 	r = 0
-	g = 0
-	b = 0
+	g = (2*PI)/3
+	b = (2*PI)*2/3
 	while True :
-		if b < 99:
-			b=b+1
-		if b%2==1 and g < 99:
-			g=g+1
-		if g%2==1 and r < 99:
-			r=r+1
-		setColor(r,g,b)#set random as a duty cycle value
+		b=(b+0.06)%(2*PI)
+		g=(g+0.06)%(2*PI)
+		r=(r+0.06)%(2*PI)
+		setColor(((Math.sin(r)+1)/2)*99,((Math.sin(g)+1)/2)*99,((Math.sin(b)+1)/2)*99)
 		print ('r=%d, g=%d, b=%d ' %(r ,g, b))
 		time.sleep(0.05)
 		
