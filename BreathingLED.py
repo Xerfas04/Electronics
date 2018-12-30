@@ -13,11 +13,11 @@ def loop():
 		for dc in range(0, 101, 1):	# Increase duty cycle 0 100
 			p.ChangeDutyCycle(dc)       # Change duty cycle
 			time.sleep(0.01)
-		time.sleep (1)
+		time.sleep (0.1)
 		for dc in range (100, -1, -1): #Decrease duty cycle 100 0
 			p.ChangeDutyCycle(dc)
 			time.sleep (0.01)
-		time.sleep (1)
+		time.sleep (0.1)
 def destroy ():
 	p.stop()
 	GPIO.output(LedPin, GPIO.LOW)   #Turn off led
