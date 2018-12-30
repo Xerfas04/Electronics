@@ -32,12 +32,12 @@ def setColor(r_val,g_val,b_val):
 
 def loop():
 	while True :
-		r=1
-		g=100
-		b=1
-		setColor(r,g,b)#set random as a duty cycle value 
-		print ('r=%d, g=%d, b=%d ' %(r ,g, b))
-		time.sleep(0.3)
+		for r in range(0,101):
+			for g in range(0,101):
+				for b in range(0,101):
+					setColor(r,g,b)#set random as a duty cycle value
+					print ('r=%d, g=%d, b=%d ' %(r ,g, b))
+					time.sleep(0.1)
 		
 def destroy():
 	p_R.stop()
