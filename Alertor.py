@@ -24,14 +24,14 @@ def setup():
 def loop():
 	while True:
 		if GPIO.input(buttonPin)==GPIO.LOW:
-			alertor()
+			stopAlertor()
 			print ('buzzer on ...')
 		else :
-			stopAlertor()
+			alertor()
 			print ('buzzer off ...')
 def alertor():
 	p.start(50)
-	for x in range(0,361):		#frequency of the alarm along the sine wave change
+	for x in range(0,628):		#frequency of the alarm along the sine wave change
 		sinVal = math.sin(x * (math.pi / 180.0))		#calculate the sine value
 		toneVal = 2000 + sinVal * 500	#Add to the resonant frequency with a Weighted
 		p.ChangeFrequency(toneVal)		#output PWM
