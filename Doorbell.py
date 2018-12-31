@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# """  """!/usr/bin/env python3
 ########################################################################
 # Filename    : Doorbell.py
 # Description : Controlling an buzzer by button.
@@ -18,11 +18,11 @@ def setup():
 
 def loop():
 	while True:
-		if GPIO.input(buttonPin)==GPIO.LOW:
-			GPIO.output(buzzerPin,GPIO.HIGH)
+		if GPIO.input(buttonPin)==GPIO.HIGH:
+			GPIO.output(buzzerPin,GPIO.LOW)
 			print ('buzzer on ...')
 		else :
-			GPIO.output(buzzerPin,GPIO.LOW)
+			GPIO.output(buzzerPin,GPIO.HIGH)
 			print ('buzzer off ...')
 
 def destroy():
