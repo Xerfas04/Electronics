@@ -19,7 +19,7 @@ def setup():
 def loop():
 	while True:
 		if GPIO.input(buttonPin)==GPIO.HIGH:
-			GPIO.output(buzzerPin,GPIO.LOW)
+			GPIO.output(buzzerPin,GPIO.HIGH)
 			print ('buzzer on ...')
 		else :
 			GPIO.output(buzzerPin,GPIO.LOW)
