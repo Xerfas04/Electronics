@@ -19,19 +19,19 @@ def setup() :
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(Z_Pin,GPIO.IN,GPIO.PUD_UP) #set Z_Pin to pull-up mode
 def loop():
-    while True:
-        val_Z = GPIO.input(Z_Pin)     #read digital qualtity of axis Z
-        val_Y = analogRead(0)         #read analog quality of axis X and Y
+    while True:     
+        val_Z = GPIO.input(Z_Pin)       #read digital quality of axis Z
+        val_Y = analogRead(0)           #read analog quality of axis X and Y
         val_X = analogRead(1)
-        print ('value_X: %d , \tvlue_Y: %d , \tvalue_Z: %d'%(val_X,val_Y,val_Z))
+        print ('value_X: %d ,\tvlue_Y: %d ,\tvalue_Z: %d'%(val_X,val_Y,val_Z))
         time.sleep(0.01)
-    
-def destoy():
-    bus.close()         
-    GPIO.cleanup()
 
-if __name__ == '__main__' :
-    print ('Program is starting...')
+def destroy():
+    bus.close()
+    GPIO.cleanup()
+    
+if __name__ == '__main__':
+    print ('Program is starting ... ')
     setup()
     try:
         loop()
