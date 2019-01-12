@@ -26,9 +26,9 @@ def loop():
         print ('value_X: %d , \tvlue_Y: %d , \tvalue_Z: %d'%(val_X,val_Y,val_Z))
         time.sleep(0.01)
     
-    def destoy():
-        bus.close()
-        GPIO.cleanup()
+def destoy():
+    bus.close()         
+    GPIO.cleanup()
 
 if __name__ == '__main__' :
     print ('Program is starting...')
